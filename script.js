@@ -17,6 +17,7 @@ function startGame() {
     document.querySelector("#user-guess").disabled = false
     document.querySelector('.end-game').remove()
     previousGuesses.textContent = "Previous Guesses: "
+    document.querySelector(".wrong-or-right").textContent = ""
 }
 
 
