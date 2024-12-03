@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guessing game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Number guessing game</h1>
+  <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or less.</p>
+  <form action="">
+    <label for="user-guess">Enter your guess</label>
+    <input type="text" id="user-guess">
+    <input type="button" id="lucky-button" value="I'm lucky">
+  </form>
+
+  <div>
+    <p class="previous-guesses">Previous Guesses: </p>
+    <p class="wrong-or-right"></p>
+    <p class="last-guess-accuracy"></p>
+  </div>
+
+<script src="/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!-- 
+User flow:
+0. Program generates a number between 1 and 100 and saves it in a variable
+1. User inputs a number in an input, clicks the button
+2. Number of counts is incremented
+3. That number is saved in variable
+4. If variabe is equal to the random number from first paragraph, then win
+5. If variable doesn't equal to random nubmer then try again and show accuracy
+6. If count = 10 then game over
+
+
+Functions. variables and loops
+
+Functions
+0. randomNumber - generates a random number
+1. userGuess - puts user input in a variable and cleans the input box
+2. checkGuess - takes variable with user guess and compares with the random one
+3. gameOver - show gameover screen and invites to a new game
+4. win - show success screen and invites to a new game
+5. newGame - cleans all results, count and shows default screen
+
+Loops
+0. If count is less than 10 make computer Guess take user input and chekguess
+1. If checkGuess is less then increment count by one and add user guess to previous guesses, show "lower" alert
+2. If checkGuess is more then increment count by one and add user guess to previous guesses, show "higher" alert
+3. If count guess is equal to 10, then gameOVer
+4. If checkGuess is true. then win
+
+Variables
+0. Count - number of attempts
+1. computerGuessVar - random number the programm has guessed
+3. userGuessVar - users current guessS
+
+-->
+
