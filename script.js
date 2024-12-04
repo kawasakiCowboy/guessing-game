@@ -26,12 +26,13 @@ function startGame() {
 // Button click saves user input in variable, clears textbox, focuses on it, every click count increments by one //
 function userGuess() {
     luckyButton.addEventListener("click", () => {
-        userGuessVar = document.querySelector("#user-guess").value
+        userGuessVar = parseInt(document.querySelector("#user-guess").value)
         document.querySelector("#user-guess").value = ""
         document.querySelector("#user-guess").focus()
         checkGuess()
         count++
         previousGuesses.textContent += ` ${userGuessVar}`
+        console.log(`Count is ${count}`)
         if (count >= 10) {
             gameOver()
         }
@@ -51,11 +52,15 @@ function checkGuess() {
         document.querySelector(".wrong-or-right").textContent = "You guess is too low"
     } else if (computerGuessVar < userGuessVar) {
         document.querySelector(".wrong-or-right").textContent = "You guess is too high"
-    } else {
+    } else if (computerGuessVar = userGuessVar) {
         document.querySelector(".wrong-or-right").textContent = "You guessed it, baby"
         gameOver()
+    }   else {
+        document.querySelector(".wrong-or-right").textContent = "Enter a number please"
+        userGuessVar = ""
+        count--
     }
-};
+    };
 
 
 // Gameover func
